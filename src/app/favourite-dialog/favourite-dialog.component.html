@@ -1,0 +1,18 @@
+<div class="container">
+<div *ngIf= "!showInput">
+    <h2><b>Add to Lists</b></h2>
+    <div  class="display:block" *ngFor="let list of existingList">
+        <a class="style" mat-dialog-close (click)="addToFavourities(list)">{{list}}</a>
+    </div>    
+</div>
+<button *ngIf= "!showInput" mat-button class="addBtn  btn-prim" type="button" (click)="addNewList()">New Collection</button>
+
+<div *ngIf= "showInput">
+    <form class="col-md-10 top" >
+<input class="search form-control" mat-input [(ngModel)]="listName" name="search"  placeholder="Enter List Name" required><br/>
+<input class="desc form-control" mat-input [(ngModel)]="listDesc" name="listDesc"  placeholder="Enter List Description" required><br/>
+<button mat-raised-button mat-dialog-close (click)="addToFavourities(listName,listDesc)" class="btn-prim">Create</button>
+</form>
+
+</div>
+</div>

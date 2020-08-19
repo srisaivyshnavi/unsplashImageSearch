@@ -1,0 +1,23 @@
+<div class="container margin">
+  <div class="row">
+    <div class="col-md-10">
+      <button [routerLink]="['/favorites']"  class="btn btn-prim">Favorities Images</button>
+    </div>
+    <div >
+        <h2>Search</h2>
+        <input type="search" [(ngModel)]="searchQuery" name = "searchQuery" (keyup)="search($event.target.value)">
+       
+    </div>
+    
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 mydivouter" *ngFor="let image of response; let i=index;">
+      <img src='{{image.urls.small}}'  style="height:200px; width:300px;border-radius:50%;" (mouseover)="onhover(image)"/>
+      <div class="mybuttonoverlap">
+        <input type="button" class=" innerBtn btn-sm " (click)="addSelected(image)" [disabled] = "disableBtn" value="Save To Favourites" /><br/>
+        <input type="button" class=" innerBtn btn-sm" (click)="authorPage(image)" value="About Author " />
+      </div>
+    </div>
+  </div>
+</div>

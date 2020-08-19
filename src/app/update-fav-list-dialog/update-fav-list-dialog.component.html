@@ -1,0 +1,10 @@
+<div class="container">
+  <div>
+    <h2><b>Edit List Name and Description</b> </h2>
+  </div>
+    <div mat-dialog-actions>
+        <input class="search form-control" mat-input [(ngModel)]="editList.name" value="{{editList.name}}"  placeholder="Enter List Name" required> <br/>
+        <input class="search form-control" mat-input [(ngModel)]="editList.desc" value="{{editList.desc}}" placeholder="Enter List Description" required> <br/>
+        <button mat-button class="btn-prim" (click)="updateList()">Update</button>
+      </div> 
+    </div>

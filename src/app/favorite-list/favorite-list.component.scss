@@ -1,0 +1,13 @@
+$blue: rgb(43, 28, 184);
+$white: rgb(230, 230, 230);
+.btn-prim {
+    background-color: $blue;
+    color: $white;
+    margin-top:10px;
+}
+.size{
+    width:200px;
+    height:200px;
+    margin-bottom:10px;
+    border-radius:50%
+}
