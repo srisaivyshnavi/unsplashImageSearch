@@ -1,21 +1,33 @@
-# VerifoneProject
+# VerifoneUnsplashImageSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+1. Project set up:
+ 
+ Angular CLI: version 10.0.5.
+ Angular Material
+ cssstyles: processor (scss)
 
-Project Description:
+2. Using the CLI
+
+ This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
 	
-This project allows users to search for images using any FREE images using UNSPLASH search API.
+3. Features Used:
 
-The results are updated live as the user type into the search box:
+  ngrx/store
+  ngrx/effects
 
-Each image display some information when hover:
-Link to author page
-A button to save the image to the user’s favorite page:
-When click, shows a pop up for the user to choose which list to add the image to
-If there’s no list, allow the user to create a new list
+Project Discription:
 
-On the Favorite page.
-Displays all lists with correct images in each list and allows user to Edit list title & description.
-OnClick of each image will trigger the download.
+Here we get the images on searching with any name in the input field
+on search hits the unsplash API
 
+after getting the images there will be some information about the image
+say author and addto favourite
+ 
+autho link will redirect to author page
+
+on adding to favourite the images are saved to favourite list
+
+favourite page there is list name and discription we can edit here 
+
+and download the image on click of image
